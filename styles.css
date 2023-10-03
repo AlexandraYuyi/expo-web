@@ -59,7 +59,7 @@
     width: 100px;
     height: 100px;
     background: green;
-    transition: width 2s;
+    transition: width 3s;
 }
 
 #div1 {
@@ -163,6 +163,24 @@
     padding: 100px;
     border-radius: 50px;
 }
+
+@keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+  }
+
+  .animada{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+  }
+
+  .animada:hover {
+    animation-name: example;
+    animation-duration: 4s;
+  }
 
 /* https://www.w3schools.com/jsref/prop_style_transitionproperty.asp */
 /* https://www.w3schools.com/howto/howto_js_animate.asp */

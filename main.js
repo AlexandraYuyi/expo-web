@@ -11,3 +11,21 @@ document.addEventListener(
 function myFunction() {
     document.getElementById("myDIV").style.transition = "all 2s";
 }
+
+
+const panels = document.querySelectorAll(".panel");
+
+const removeActiveClass = () => {
+    for (const panel of panels) {
+        if (panel.classList.contains("active")) {
+            return panel.classList.remove("active");
+        }
+    }
+};
+
+for (const panel of panels) {
+    panel.addEventListener("click", () => {
+        removeActiveClass();
+        panel.classList.add("active");
+    });
+}

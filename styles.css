@@ -165,23 +165,114 @@
 }
 
 @keyframes example {
-    0%   {background-color: red;}
-    25%  {background-color: yellow;}
-    50%  {background-color: blue;}
-    100% {background-color: green;}
-  }
+    0% {
+        background-color: red;
+    }
 
-  .animada{
+    25% {
+        background-color: yellow;
+    }
+
+    50% {
+        background-color: blue;
+    }
+
+    100% {
+        background-color: green;
+    }
+}
+
+.animada {
     width: 100px;
     height: 100px;
     background-color: red;
-  }
+}
 
-  .animada:hover {
+.animada:hover {
     animation-name: example;
     animation-duration: 4s;
-  }
+}
 
 /* https://www.w3schools.com/jsref/prop_style_transitionproperty.asp */
 /* https://www.w3schools.com/howto/howto_js_animate.asp */
 /* https://css-tricks.com/controlling-css-animations-transitions-javascript/ */
+
+@import url(https://fonts.bunny.net/css?family=arya:400,700);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* html {
+    font-size: 62.5%;
+} */
+
+.container {
+    align-items: center;
+    display: flex;
+    font-family: "arya", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    justify-content: center;
+    min-height: 80vh;
+    overflow: hidden;
+}
+
+.container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 90vw;
+}
+
+.panel {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5rem;
+    color: #fff;
+    cursor: pointer;
+    filter: sepia(90%) blur(0.2rem);
+    flex: 0.5;
+    height: 60vh;
+    margin: 1em;
+    position: relative;
+    transition: flex 500ms ease-in, filter 500ms ease-in;
+}
+
+.panel-heading {
+    background-color: rgba(65, 182, 230, 0.8);
+    bottom: 2rem;
+    font-size: 2.2rem;
+    left: 2rem;
+    opacity: 0;
+    padding: 0.5rem;
+    position: absolute;
+    right: 2rem;
+    transition: opacity 500ms ease-in;
+}
+
+.panel.active {
+    box-shadow: rgba(255, 255, 255, 0.1) 0 1px 1px 0 inset,
+        rgba(50, 50, 93, 0.25) 0 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0 30px 60px -30px;
+    filter: none;
+    flex: 5;
+}
+
+.panel.active .panel-heading {
+    opacity: 1;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}

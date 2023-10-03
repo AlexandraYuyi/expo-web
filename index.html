@@ -1,59 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Transiciones en Programación Web</title>
+
+    <!-- No modifiquen el base de no ser NECESARIO -->
+    <link rel="stylesheet" type="text/css" href="base.css">
+
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
+
 <body>
-    <div class="no"></div>
-    <div class="no">
-        <div class="animated_div">CSS</div>
+    <main class="main">
+        <div class="diapositiva-bg titulo">
+            <div class="diapositiva">
+                <h1>Transiciones</h1>
+            </div>
         </div>
-    
-        <div class="red"></div>
-        <div class="blue"></div>
 
-        <p>Hover over the div elements below, to see the different speed curves:</p>
+        <!-- NO BORRAR EL PRIMER EJEMPLO -->
+        <!-- Contenerdor de una diapositiva -->
+        <div class="diapositiva-bg">
+            <!-- Esto es el contenido de una diapositiva. -->
+            <div class="diapositiva">
+                <!-- modificar el titulo -->
+                <h2>¿Qué es una transición?</h2>
 
-<div class="speed" id="div1">linear</div><br>
-<div class="speed" id="div2">ease</div><br>
-<div class="speed" id="div3">ease-in</div><br>
-<div class="speed" id="div4">ease-out</div><br>
-<div class="speed" id="div5">ease-in-out</div><br>
+                <!-- Cada ejemplo debe usar el class 'ejemplo'. -->
+                <h3>Sin transición</h3>
+                <div class="ejemplo">
+                    <!-- El primer contenedor es la muestra -->
+                    <div>
+                        <div class="caja"></div>
+                    </div>
 
-<h1>The transition-delay Property</h1>
+                    <!-- El segundo contenedor es el código relevante -->
+                    <div>
+                        <pre>
+                            .caja {
+                                background-color: cornflowerblue;
+                            }
 
-<p>Hover over the div element below, to see the transition effect:</p>
+                            .caja:hover {
+                                background-color: orange;
+                            }
+                        </pre>
+                    </div>
+                </div>
 
-<div class="delay"></div>
+                <h3>Con transición</h3>
+                <div class="ejemplo">
+                    <div>
+                        <div class="caja" style="transition: background-color 500ms linear;"></div>
+                    </div>
 
-<p><b>Note:</b> The transition effect has a 1 second delay before starting.</p>
+                    <div>
+                        <pre>
+                            .caja {
+                                transition: background-color 500ms linear;
+                            }
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<h1>Transition + Transform</h1>
-
-<p>Hover over the div element below:</p>
-
-<div class="trans"></div>
-
-<h1>The transition Properties Specified One by One</h1>
-
-<p>Click anywhere to move the ball</p>
-<div id="foo" class="ball"></div>
-
-<p>Mouse over the DIV element and it will change, both in color and size!</p>
-
-<p>Click the "Try it" button and mouse over the DIV element again. The change will now happen gradually, like an animation:</p>
-
-<button onclick="myFunction()">Try it</button>
-
-<div id="myDIV">
-  <h1>myDIV</h1>
-</div>
+        <div class="diapositiva-bg">
+            <div class="diapositiva">
+                <h2>Agregar un <em>delay</em></h2>
 
 
-<!-- https://cssreference.io/transitions/ -->
-<script src="main.js"></script>
+                <h3>Inmediata</h3>
+                <div class="ejemplo">
+                    <!-- El primer contenedor es la muestra -->
+                    <div class="delay nodelay"></div>
+
+                    <!-- El segundo contenedor es el código relevante -->
+                    <pre></pre>
+                </div>
+
+                <h3>Usando un <em>delay</em></h3>
+                <div class="ejemplo">
+                    <!-- El primer contenedor es la muestra -->
+                    <div class="delay"></div>
+
+                    <!-- El segundo contenedor es el código relevante -->
+                    <pre></pre>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="diapositiva-bg">
+            <div class="diapositiva">
+                <h2>Tipos de funciones de intervalo de Transición</h2>
+
+                <h3>Transicion de tipo: linear</h3>
+                <div class="ejemplo">
+                    <!-- El primer contenedor es la muestra -->
+                    <div class="speed" id="div1"></div>
+
+                    <!-- El segundo contenedor es el código relevante -->
+                    <pre></pre>
+                </div>
+
+                <h3>Transicion de tipo: ease</h3>
+                <div class="ejemplo">
+                    <!-- El primer contenedor es la muestra -->
+                    <div class="speed" id="div2"></div>
+
+                    <!-- El segundo contenedor es el código relevante -->
+                    <pre></pre>
+                </div>
+
+                <h3>Transicion de tipo: ease-in</h3>
+                <div class="ejemplo">
+                    <!-- El primer contenedor es la muestra -->
+                    <div class="speed" id="div3"></div>
+
+                    <!-- El segundo contenedor es el código relevante -->
+                    <pre></pre>
+                </div>
+
+                <h3>Transicion de tipo: ease-out</h3>
+                <div class="ejemplo">
+                    <!-- El primer contenedor es la muestra -->
+                    <div class="speed" id="div4"></div>
+
+                    <!-- El segundo contenedor es el código relevante -->
+                    <pre></pre>
+                </div>
+
+                <h3>Transicion de tipo: ease-in-out</h3>
+                <div class="ejemplo">
+                    <!-- El primer contenedor es la muestra -->
+                    <div class="speed" id="div5"></div>
+
+                    <!-- El segundo contenedor es el código relevante -->
+                    <pre>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,186 @@
+/* NO MODIFICAR DE NO SER NECESARIO */
+
+* {
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Página y diapositivas */
+
+.main {
+    scroll-snap-type: y mandatory;
+}
+
+.diapositiva-bg {
+    scroll-snap-align: start;
+    overflow-x: hidden;
+
+    width: 99vw;
+    /* height: 100vh; */
+    min-height: 100vh;
+}
+
+.diapositiva-bg:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+.diapositiva {
+    width: 90%;
+    max-width: 1366px;
+    min-height: 100vh;
+
+    margin: 0 auto;
+    padding: 3em 64px;
+
+    /* background-color: white; */
+
+    /* outline: 1px solid burlywood; */
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    padding-bottom: 0.5em;
+    transition: all 300ms ease;
+}
+
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover {
+    padding-left: 1em;
+}
+
+h1,
+h2 {
+    margin-bottom: 3em;
+}
+
+h3,
+h4,
+h5 {
+    margin-bottom: 1.5em;
+}
+
+/* Título */
+
+.titulo .diapositiva {
+    background-color: white;
+    transition: all 600ms ease;
+}
+
+.titulo, .titulo .diapositiva:hover {
+    background-color: #333;
+}
+
+.titulo h1 {
+    font-size: 64px;
+    margin-top: 10vh;
+    margin-left: 10%;
+
+    padding-left: 64px;
+
+    border-radius: 72px;
+
+    transition: all 800ms ease;
+}
+
+.diapositiva:hover h1 {
+    font-size: 64px;
+    margin-left: 0%;
+    color: white;
+
+    animation: titulo 5s ease forwards, marquee 8s 5s linear infinite;
+}
+
+@keyframes titulo {
+    0% {
+        font-size: 64px;
+    }
+
+    70% {
+        font-size: 150px;
+    }
+
+    80% {
+        font-size: 100px;
+    }
+
+    90% {
+        font-size: 150px;
+    }
+
+    100% {
+        font-size: 128px;
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Elementos dentro de diapositivas */
+
+h2 {
+    margin-left: -64px;
+    border-bottom: 2px black solid;
+}
+
+.ejemplo {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+}
+
+.ejemplo:not(:last-child) {
+    margin-bottom: 48px;
+}
+
+.ejemplo>* {
+    display: flex;
+    flex-direction: column;
+
+    justify-items: center;
+    align-items: center;
+}
+
+pre {
+    width: 100%;
+    height: 100%;
+
+    border: 2px #444 solid;
+    border-radius: 32px;
+    padding: 1em;
+    font-size: 16px;
+    font-weight: 500;
+
+    white-space: pre-line;
+
+    background-color: white;
+}
+
+.caja {
+    width: 100px;
+    height: 100px;
+
+    /* border: 2px solid #0f0f0f; */
+    background-color: cornflowerblue;
+}
+
+.caja:hover {
+    background-color: orange;
+}

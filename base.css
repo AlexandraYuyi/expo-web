@@ -9,12 +9,17 @@
 
 /* Página y diapositivas */
 
-.main {
-    scroll-snap-type: y mandatory;
+html,body,.main {
+    /* overflow-y: scroll; */
+    scroll-snap-type: y proximity;
+    /* scroll-snap-points-y: repeat(100vh); */
+    /* scroll-snap-type: proximity; */
+    scroll-snap-stop: always;
 }
 
 .diapositiva-bg {
     scroll-snap-align: start;
+
     overflow-x: hidden;
 
     width: 99vw;

@@ -226,12 +226,28 @@
                         
                           .animada:hover {
                             animation-name: rainbow;
-                            animation-duration: 4s;
+                            animation-duration: 3s;
                           }
                     </pre>
                 </div>
             </div>
 
+            <h3>Con animación y forwards</h3>
+            <div class="ejemplo">
+                <!-- El primer contenedor es la muestra -->
+                <div>
+                    <div class="animada animada-forwards"></div>
+                </div>
+
+                <!-- El segundo contenedor es el código relevante -->
+                <div>
+                    <pre>
+                        .animada.animada-forwards:hover {
+                            animation-fill-mode: forwards;
+                        }
+                    </pre>
+                </div>
+            </div>
         </div>
     </div>
 

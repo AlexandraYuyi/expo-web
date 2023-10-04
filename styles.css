@@ -190,7 +190,11 @@
 
 .animada:hover {
     animation-name: rainbow;
-    animation-duration: 4s;
+    animation-duration: 3s;
+}
+
+.animada.animada-forwards:hover {
+    animation-fill-mode: forwards;
 }
 
 /* https://www.w3schools.com/jsref/prop_style_transitionproperty.asp */

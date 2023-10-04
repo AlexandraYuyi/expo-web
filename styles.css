@@ -148,7 +148,7 @@
     transition: transform 1s;
 }
 
-#myDIV {
+/* #myDIV {
     border: 1px solid black;
     background-color: lightblue;
     width: 270px;
@@ -162,9 +162,9 @@
     height: 500px;
     padding: 100px;
     border-radius: 50px;
-}
+} */
 
-@keyframes example {
+@keyframes rainbow {
     0% {
         background-color: red;
     }
@@ -189,7 +189,7 @@
 }
 
 .animada:hover {
-    animation-name: example;
+    animation-name: rainbow;
     animation-duration: 4s;
 }
 

@@ -79,10 +79,13 @@
                 <div class="delay nodelay"></div>
 
                 <!-- El segundo contenedor es el código relevante -->
-                <pre>
-                .nodelay {
-                    transition-delay: 0s;
-                }</pre>
+                <div>
+                    <pre>
+                        .nodelay {
+                            transition-delay: 0s;
+                        }
+                    </pre>
+                </div>
             </div>
 
             <h3>Usando un <em>delay</em></h3>
@@ -91,19 +94,21 @@
                 <div class="delay"></div>
 
                 <!-- El segundo contenedor es el código relevante -->
-                <pre>
-                    .delay {
-                        width: 100px;
-                        height: 100px;
-                        background: red;
-                        transition: width 3s;
-                        transition-delay: 1s;
-                    }
-                    
-                    .delay:hover {
-                        width: 300px;
-                    }
-                </pre>
+                <div>
+                    <pre>
+                        .delay {
+                            width: 100px;
+                            height: 100px;
+                            background: red;
+                            transition: width 3s;
+                            transition-delay: 1s;
+                        }
+                        
+                        .delay:hover {
+                            width: 300px;
+                        }
+                    </pre>
+                </div>
             </div>
         </div>
     </div>
@@ -119,11 +124,13 @@
                 <div class="speed" id="div1"></div>
 
                 <!-- El segundo contenedor es el código relevante -->
-                <pre>
-                    #div1 {
-                        transition-timing-function: linear;
-                    }
-                </pre>
+                <div>
+                    <pre>
+                        #div1 {
+                            transition-timing-function: linear;
+                        }
+                    </pre>
+                </div>
             </div>
 
             <h3>Transicion de tipo: ease</h3>
@@ -132,11 +139,13 @@
                 <div class="speed" id="div2"></div>
 
                 <!-- El segundo contenedor es el código relevante -->
-                <pre>
+                <div>
+                    <pre>
                     #div2 {
                         transition-timing-function: ease;
                     }
-                </pre>
+                    </pre>
+                </div>
             </div>
 
             <h3>Transicion de tipo: ease-in</h3>
@@ -145,11 +154,13 @@
                 <div class="speed" id="div3"></div>
 
                 <!-- El segundo contenedor es el código relevante -->
-                <pre>
-                    #div3 {
-                        transition-timing-function: ease-in;
-                    }
-                </pre>
+                <div>
+                    <pre>
+                        #div3 {
+                            transition-timing-function: ease-in;
+                        }
+                    </pre>
+                </div>
             </div>
 
             <h3>Transicion de tipo: ease-out</h3>
@@ -158,11 +169,13 @@
                 <div class="speed" id="div4"></div>
 
                 <!-- El segundo contenedor es el código relevante -->
-                <pre>
-                    #div4 {
-                        transition-timing-function: ease-out;
-                    }
-                </pre>
+                <div>
+                    <pre>
+                        #div4 {
+                            transition-timing-function: ease-out;
+                        }
+                    </pre>
+                </div>
             </div>
 
             <h3>Transicion de tipo: ease-in-out</h3>
@@ -171,17 +184,19 @@
                 <div class="speed" id="div5"></div>
 
                 <!-- El segundo contenedor es el código relevante -->
-                <pre>
-                    #div5 {
+                <div>
+                    <pre>
+                        #div5 {
                         transition-timing-function: ease-in-out;
-                    }
-                </pre>
+                        }
+                    </pre>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="diapositiva-bg">
-    
+
         <div class="diapositiva">
 
             <h2>¿Qué son Animaciones?</h2>
@@ -196,7 +211,7 @@
                 <!-- El segundo contenedor es el código relevante -->
                 <div>
                     <pre>
-                        @keyframes example {
+                        @keyframes rainbow {
                             0%   {background-color: red;}
                             25%  {background-color: yellow;}
                             50%  {background-color: blue;}
@@ -210,47 +225,47 @@
                           }
                         
                           .animada:hover {
-                            animation-name: example;
+                            animation-name: rainbow;
                             animation-duration: 4s;
                           }
                     </pre>
                 </div>
             </div>
-            
+
         </div>
     </div>
 
     <div class="diapositiva-bg">
-    
-      <div class="diapositiva">
 
-          <h2>Transiciones con Javascript</h2>
+        <div class="diapositiva">
 
-          <div class="container">
-            <div class="panel active" style="background-image:
+            <h2>Transiciones con Javascript</h2>
+
+            <div class="container">
+                <div class="panel active" style="background-image:
                     url('chicago.webp');">
-                <h3 class="panel-heading">Explore Chicagoland</h3>
-            </div>
-            <div class="panel" style="background-image:
+                    <h3 class="panel-heading">Explore Chicagoland</h3>
+                </div>
+                <div class="panel" style="background-image:
                     url('cloud.webp')">
-                <h3 class="panel-heading">Cloud Gate</h3>
-            </div>
-            <div class="panel" style="background-image:
+                    <h3 class="panel-heading">Cloud Gate</h3>
+                </div>
+                <div class="panel" style="background-image:
                     url('show.webp');">
-                <h3 class="panel-heading">Catch A Show</h3>
-            </div>
-            <div class="panel" style="background-image:
+                    <h3 class="panel-heading">Catch A Show</h3>
+                </div>
+                <div class="panel" style="background-image:
                     url('river.webp')">
-                <h3 class="panel-heading">See The Riverwalk</h3>
-            </div>
-            <div class="panel" style="background-image:
+                    <h3 class="panel-heading">See The Riverwalk</h3>
+                </div>
+                <div class="panel" style="background-image:
                     url('night.webp')">
-                <h3 class="panel-heading">Enjoy The Nightlife</h3>
+                    <h3 class="panel-heading">Enjoy The Nightlife</h3>
+                </div>
             </div>
+
         </div>
-          
-      </div>
-  </div>
+    </div>
 
     <script src="main.js"></script>
 </body>

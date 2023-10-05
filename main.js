@@ -1,3 +1,4 @@
+// Diapositiva de Sliding panels
 const panels = document.querySelectorAll(".panel");
 
 const removeActiveClass = () => {
@@ -15,29 +16,48 @@ for (const panel of panels) {
     });
 }
 
-const button = document.querySelector('.button');
-const submit = document.querySelector('.submit');
+const buttonTransitionEvent = document.querySelector('.button-transition-event');
+
+function toggleClassEvent() {
+	buttonTransitionEvent.classList.toggle('active');
+}
+
+function addClassEvent() {
+	buttonTransitionEvent.classList.add('finished');
+}
+
+buttonTransitionEvent.addEventListener('click', toggleClassEvent);
+buttonTransitionEvent.addEventListener('transition', toggleClassEvent);
+buttonTransitionEvent.addEventListener('transition', addClassEvent);
+
+const button = document.querySelector('.button-no-transition-event');
 
 function toggleClass() {
-	this.classList.toggle('active');
+	button.classList.toggle('active');
+
+    setTimeout(addClass, 3000)
 }
 
 function addClass() {
-	this.classList.add('finished');
+	button.classList.add('finished');
+
+    setTimeout(() => {
+	    button.classList.remove('finished');
+        button.classList.remove('active');
+    }, 2000)
 }
 
 button.addEventListener('click', toggleClass);
-button.addEventListener('transition', toggleClass);
-button.addEventListener('transition', addClass);
+console.log({buttonTransitionEvent, button})
 
 
+// Animar un botón
 function animateColor() {
     // Get a random color
     const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-  
+
     // Set the square's background color to the random color
     document.querySelector('.square').style.backgroundColor = randomColor;
-  }
-  
-  // Set an interval to call the animateColor function every 3 seconds
-  setInterval(animateColor, 3000);
+}
+
+setInterval(animateColor, 3000);

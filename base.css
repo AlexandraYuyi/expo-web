@@ -1,10 +1,15 @@
 /* NO MODIFICAR DE NO SER NECESARIO */
 
 * {
-    font-family: 'Courier New', Courier, monospace;
     box-sizing: border-box;
+    
+    outline: none;
     margin: 0;
     padding: 0;
+    
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.5;
+    color: #333;
 }
 
 /* Página y diapositivas */

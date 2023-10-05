@@ -237,11 +237,12 @@
                 <div>
                     <pre>
                         @keyframes rainbow {
-                            0%   {background-color:red; transform: translateY(20px)}
-                            25%  {background-color:yellow;transform: translateY(40px)}
-                            50%  {background-color:blue; transform: translateY(60px)}
-                            75%  {background-color:green; transform: translateY(80px)}
-                            100% {background-color:purple; transform: translateY(100px)}
+                            0%   {background-color:red;}
+                            10%   {height: 120px}
+                            25%  {background-color:yellow; height: 140px}
+                            50%  {background-color:blue; height: 160px}
+                            75%  {background-color:green; height: 180px}
+                            100% {background-color:purple; height: 200px}
                         }
                         
                           .animada:hover {
@@ -264,6 +265,7 @@
                     <pre>
                         .animada.animada-forwards:hover {
                             animation-fill-mode: forwards;
+                            animation-delay: 1s;
                         }
                     </pre>
                 </div>

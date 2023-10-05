@@ -201,7 +201,7 @@
 
             <h2>¿Qué son Animaciones?</h2>
 
-            <h3>Con animación</h3>
+            <h3>Cambios intermedios con animación</h3>
             <div class="ejemplo">
                 <!-- El primer contenedor es la muestra -->
                 <div>
@@ -212,17 +212,12 @@
                 <div>
                     <pre>
                         @keyframes rainbow {
-                            0%   {background-color: red;}
-                            25%  {background-color: yellow;}
-                            50%  {background-color: blue;}
-                            100% {background-color: green;}
-                          }
-                        
-                          .animada{
-                            width: 100px;
-                            height: 100px;
-                            background-color: red;
-                          }
+                            0%   {background-color:red; transform: translateY(20px)}
+                            25%  {background-color:yellow;transform: translateY(40px)}
+                            50%  {background-color:blue; transform: translateY(60px)}
+                            75%  {background-color:green; transform: translateY(80px)}
+                            100% {background-color:purple; transform: translateY(100px)}
+                        }
                         
                           .animada:hover {
                             animation-name: rainbow;
@@ -232,7 +227,7 @@
                 </div>
             </div>
 
-            <h3>Con animación y forwards</h3>
+            <h3>Animación con forwards y delay</h3>
             <div class="ejemplo">
                 <!-- El primer contenedor es la muestra -->
                 <div>
@@ -248,6 +243,31 @@
                     </pre>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="diapositiva-bg">
+        <div class="diapositiva">
+            <h2>Otras propiedades de las animaciones</em> </h2>
+
+
+            <h3>Inmediata</h3>
+            <div class="ejemplo">
+                <!-- El primer contenedor es la muestra -->
+                <div class="container-circle">
+                    <div class="conic-multicolor-effect"></div>
+                  </div>
+
+                <!-- El segundo contenedor es el código relevante -->
+                <div>
+                    <pre>
+                        .nodelay {
+                            transition-delay: 0s;
+                        }
+                    </pre>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -289,7 +309,7 @@
 
             <h2>Transiciones con Javascript</h2>
 
-            <div class="ejemplo">
+            <div class="ejemplo bd">
             <div>
                 <button class="button">
                     <span class="submit">Submit</span>

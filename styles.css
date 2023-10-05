@@ -165,21 +165,11 @@
 } */
 
 @keyframes rainbow {
-    0% {
-        background-color: red;
-    }
-
-    25% {
-        background-color: yellow;
-    }
-
-    50% {
-        background-color: blue;
-    }
-
-    100% {
-        background-color: green;
-    }
+    0%   {background-color:red; transform: translateY(20px)}
+    25%  {background-color:yellow;transform: translateY(40px)}
+    50%  {background-color:blue; transform: translateY(60px)}
+    75%  {background-color:green; transform: translateY(80px)}
+    100% {background-color:purple; transform: translateY(100px)}
 }
 
 .animada {
@@ -195,6 +185,7 @@
 
 .animada.animada-forwards:hover {
     animation-fill-mode: forwards;
+    animation-delay: 1s;
 }
 
 /* https://www.w3schools.com/jsref/prop_style_transitionproperty.asp */
@@ -294,6 +285,16 @@
     line-height: 1.5;
     color: #444;
   }
+
+  /* .bd {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+} */
   
   .hide {
     display: none;
@@ -426,4 +427,51 @@
     100% {
       background-color: green;
     }
+  }
+
+  @property --angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+  }
+  @property --hue {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+  }
+
+  .conic-multicolor-effect {
+    height: 80%;
+    width: 80%;
+    border-radius: 50%;
+    --color: hsl(var(--hue, 0), 94%, 61%);
+    background: conic-gradient(
+      var(--color) var(--angle),
+      transparent calc(var(--angle))
+    );
+    animation: conic-multi-color-effect 2s ease-in-out alternate infinite;
+  }
+  
+  @keyframes conic-multi-color-effect {
+    from {
+      --angle: -1deg;
+      --hue: 31;
+    }
+  
+    to {
+      --angle: 360deg;
+      --hue: 211;
+    }
+  }
+
+  .container-circle {
+    width: 500px;
+    height: 500px;
+    border: 5px solid lightgray;
+    background: black;
+    position: relative;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }

@@ -278,7 +278,7 @@
             <h2>Otras propiedades de las animaciones</em> </h2>
 
 
-            <h3>Inmediata</h3>
+            <h3>timing-function, direction e iteration-count</h3>
             <div class="ejemplo">
                 <!-- El primer contenedor es la muestra -->
                 <div class="container-circle">
@@ -288,9 +288,29 @@
                 <!-- El segundo contenedor es el código relevante -->
                 <div>
                     <pre>
-                        .nodelay {
-                            transition-delay: 0s;
-                        }
+                        .conic-multicolor-effect {
+                                height: 80%;
+                                width: 80%;
+                                border-radius: 50%;
+                                --color: hsl(var(--hue, 0), 94%, 61%);
+                                background: conic-gradient(
+                                var(--color) var(--angle),
+                                transparent calc(var(--angle))
+                            );
+                                animation: conic-multi-color-effect 2s ease-in-out alternate infinite;
+                          }
+                          
+                          @keyframes conic-multi-color-effect {
+                            from {
+                                --angle: -1deg;
+                                --hue: 31;
+                            }
+                          
+                            to {
+                                --angle: 360deg;
+                                --hue: 211;
+                            }
+                          }
                     </pre>
                 </div>
             </div>

@@ -283,6 +283,63 @@
         </div>
     </div>
 
+    <div class="diapositiva-bg">
+
+        <div class="diapositiva">
+
+            <h2>Transiciones con Javascript</h2>
+
+            <div class="ejemplo">
+            <div>
+                <button class="button">
+                    <span class="submit">Submit</span>
+                    <span class="loading"><i class="fa fa-refresh"></i></span>
+                    <span class="check"><i class="fa fa-check"></i></span>
+                </button>
+            </div>
+            <div>
+                <pre>
+                    const button = document.querySelector('.button');
+                    const submit = document.querySelector('.submit');
+
+                    function toggleClass() {
+                        this.classList.toggle('active');
+                    }
+
+                    function addClass() {
+                        this.classList.add('finished');
+                    }
+
+                    button.addEventListener('click', toggleClass);
+                    button.addEventListener('transition', toggleClass);
+                    button.addEventListener('transition', addClass);
+                </pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="diapositiva-bg">
+
+        <div class="diapositiva">
+
+            <h2>Transiciones con Animate</h2>
+            <div class = "ejemplo">     
+                <div class = "square">
+                </div>
+                <div>
+                    <pre>
+                        function animateColor() {
+                            const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+                            document.querySelector('.square').style.backgroundColor = randomColor;
+                          }
+                          setInterval(animateColor, 3000);
+                    </pre>
+             </div>
+            </div>
+        </div>
+    </div>
+    
+
     <script src="main.js"></script>
 </body>
 
